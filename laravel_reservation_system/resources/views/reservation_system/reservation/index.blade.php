@@ -32,7 +32,8 @@
                                     {{ $reservation->chargeParent->charges->date}}
                                 </td>
                                 <td>
-                            
+
+                                    
                                 </td>
                                 <td>
                                     <a href="{{ route('reservation.show', $reservation->id) }}" class="btn btn-primary">詳細</a>
