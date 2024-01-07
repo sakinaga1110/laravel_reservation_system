@@ -8,15 +8,12 @@
                 </div>
             </div>
             <div class="card-body">
-                予約一覧<br>
                 <table class="table">
                     <thead>
                         <tr>
                             <th>名前</th>
                             <th>電話番号</th>
                             <th>メールアドレス</th>
-                            <th>チェックイン</th>
-                            <th>チェックアウト</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -29,14 +26,7 @@
                                 <td>{{ $reservation->phone_num }}</td>
                                 <td>{{ $reservation->email }}</td>
                                 <td>
-                                    {{ $reservation->chargeParent->charges->date}}
-                                </td>
-                                <td>
-
-                                    
-                                </td>
-                                <td>
-                                    <a href="{{ route('reservation.show', $reservation->id) }}" class="btn btn-primary">詳細</a>
+                                    <a href="{{ route('reservation.show', $reservation) }}" class="btn btn-primary">詳細</a>
                                 </td>
                             </tr>
                         @endforeach

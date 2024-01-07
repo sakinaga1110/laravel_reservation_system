@@ -16,6 +16,11 @@
 <body>
     <x-header>
     </x-header>
+    @if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
     <main>
         @yield('content')
     </main>
